@@ -12,7 +12,7 @@ const AddBlog = async (req, res) => {
       userId,
     } = req.body;
 
-    console.log("userid from addBlog", userId);
+    // console.log("userid from addBlog", userId);
 
     const newBlog = new Blog({
       title,

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import DiscussionForum from '../Discusion-forum/DiscussionForum'
 
 const ViewBlog = () => {
   const location = useLocation()
@@ -27,7 +28,8 @@ const ViewBlog = () => {
   } = blog
 
   return (
-    <article className="max-w-5xl mx-auto my-10 bg-white rounded-3xl shadow-md overflow-hidden select-none p-6">
+    < div className='max-w-5xl mx-auto '>
+        <article className=" my-10 bg-white rounded-3xl shadow-md overflow-hidden select-none p-6">
       <button
         onClick={() => navigate(-1)}
         className="mb-6 text-indigo-600 hover:underline"
@@ -60,7 +62,19 @@ const ViewBlog = () => {
       <p className="text-gray-700 leading-relaxed whitespace-pre-line">{content || excerpt}</p>
 
       <p className="mt-6 text-sm text-gray-500">Author: {author || 'Unknown'}</p>
+     
+      
+
     </article>
+    
+    
+     <div className='shadow-md rounded-3xl'>
+        
+        
+        <DiscussionForum/>
+    </div>
+    </div>
+   
   )
 }
 

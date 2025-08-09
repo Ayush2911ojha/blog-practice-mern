@@ -15,11 +15,11 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    enum: ['Technology', 'Travel', 'Food', 'Lifestyle', 'Business', 'Education', 'All'], // Align with your categories
+    enum: ['Technology', 'Travel', 'Food', 'Lifestyle', 'Business', 'Education', 'All'], 
     default: 'All',
   },
   image: {
-    type: String, // URL to thumbnail image
+    type: String, 
     default: '',
   },
   excerpt: {
